@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/custom.css" />
+
+        <title>Sprint 4</title>
+    </head>
+    <body>
+        <header>
+            <h1>Sprint 4</h1>
+            <p>Interface para a sprint 4 de microservices (3 SIS)</p>
+        </header>
+
+        <main class="container">
+            <div class="emails">
+                <h2>E-mails</h2>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{# emails }}
+                            <tr>
+                                <td>{{ userId }}</td>
+                                <td>{{ id }}</td>
+                                <td>{{ title }}</td>
+                                <td>{{ completed }}</td>
+                            </tr>
+                        {{/ emails }}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="produtos">
+                <h2>Produtos</h2>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{# produtos }}
+                            <tr>
+                                <td>{{ userId }}</td>
+                                <td>{{ id }}</td>
+                                <td>{{ title }}</td>
+                                <td>{{ completed }}</td>
+                            </tr>
+                        {{/ produtos }}
+                    </tbody>
+                </table>
+
+                <form method="POST" action="/produto">
+                    <div class="mb-3">
+                      <label for="marca" class="form-label">Marca</label>
+                      <input type="text" class="form-control" id="marca" name="marca" />
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="preco" class="form-label">Preço</label>
+                        <input type="text" class="form-control" id="preco" name="preco" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="categoria" class="form-label">Categoria</label>
+                        <input type="text" class="form-control" id="categoria" name="categoria" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="peso" class="form-label">Peso</label>
+                        <input type="text" class="form-control" id="peso" name="peso" />
+                    </div>
+                      
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

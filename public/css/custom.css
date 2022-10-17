@@ -1,0 +1,22 @@
+header {
+    width: 100%;
+    background: #ededed;
+    padding: 80px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+main {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.produtos {
+    margin-top: 60px;
+}
+
+.produtos table {
+    margin-bottom: 50px;
+}
