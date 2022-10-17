@@ -51,7 +51,7 @@ app.get('/', (_, res) => {
 });
 
 app.post('/produto', (req, res) => {
-  axios.post(`${baseURL}/produto`, req.data, config);
+  axios.post(`${baseURL}/produto`, JSON.stringify(req.data), config);
   res.redirect('/');
 });
 
