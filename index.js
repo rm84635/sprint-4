@@ -9,6 +9,10 @@ const port = 1337;
 const baseURL = 'http://localhost:3000';
 
 const config = {
+  headers: {
+    'Content-Type': 'application/json'
+  },
+
   auth: {
     username: 'julio',
     password: 'facal'
