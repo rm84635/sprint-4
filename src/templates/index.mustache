@@ -23,20 +23,22 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Chave</th>
+                            <th scope="col">Assunto</th>
+                            <th scope="col">Texto</th>
+                            <th scope="col">Remetente</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         {{# emails }}
                             <tr>
-                                <td>{{ userId }}</td>
                                 <td>{{ id }}</td>
-                                <td>{{ title }}</td>
-                                <td>{{ completed }}</td>
+                                <td>{{ chave }}</td>
+                                <td>{{ assunto }}</td>
+                                <td>{{ texto }}</td>
+                                <td>{{ remetente }}</td>
                             </tr>
                         {{/ emails }}
                     </tbody>
@@ -49,20 +51,22 @@
                 <table class="table">
                     <thead>
                         <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Peso</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         {{# produtos }}
                             <tr>
-                                <td>{{ userId }}</td>
                                 <td>{{ id }}</td>
-                                <td>{{ title }}</td>
-                                <td>{{ completed }}</td>
+                                <td>{{ marca }}</td>
+                                <td>R${{ preco }}</td>
+                                <td>{{ categoria }}</td>
+                                <td>{{ peso }} g</td>
                             </tr>
                         {{/ produtos }}
                     </tbody>
