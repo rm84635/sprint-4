@@ -8,12 +8,19 @@ const port = 1337;
 
 const baseURL = 'http://localhost:3000';
 
+const config = {
+  auth: {
+    username: 'julio',
+    password: 'facal'
+  }
+};
+
 function getEmails() {
-  return axios.get(`${baseURL}/email`);
+  return axios.get(`${baseURL}/email`, config);
 }
 
 function getProdutos() {
-  return axios.get(`${baseURL}/produto`);
+  return axios.get(`${baseURL}/produto`, config);
 }
 
 function renderTemplate(name, data) {
